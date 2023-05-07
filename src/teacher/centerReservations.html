@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <title>الحجوزات</title>
+</head>
+
+<body>
+
+    <header class="bg-white flex-wrap items-center justify-between mx-2 mb-2 rounded-b-2xl ">
+        <div class="flex justify-between items-center mx-auto px-4 rounded-b-2xl w-full bg-purple-light">
+            <!-- User Data -->
+            <div class="sm:flex flex items-end sm:items-center">
+                <div class="relative flex items-center order-2 sm:order-1">
+                    <button>
+                        <img src="../../assets/bell.png" alt="Bell" class="h-7 w-7">
+                        <span
+                            class="absolute bottom-4 left-4 p-2 rounded-full bg-red-600 text-white text-xs flex items-center justify-center h-4 w-4">
+                            10
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Logo -->
+            <div class="flex items-center sm:ml-4">
+                <img src="../../assets/goldenlogo.png" alt="Logo" class="h-16 w-17">
+            </div>
+
+            <!-- Search Input -->
+            <div class="relative flex items-center">
+                <img src="../../assets/avtar.png" alt="My Image" class="h-10 w-10 rounded-full sm:mr-4 order-3">
+                <h1 class="text-white font-bold text-lg">عبد الله أحمد</h1>
+            </div>
+        </div>
+        <div class="h-2 bg-purple-light mt-2"></div>
+    </header>
+
+    <!-- mobile nav control -->
+    <!-- Burger menu -->
+    <span
+        class="absolute lg:hidden p-2 border-gray-100 border-solid border-2 rounded-md text-black text-2xl top-20  right-4 cursor-pointer"
+        onclick="openSidebar()">
+        <i class="las la-bars la-2xl"></i>
+    </span>
+    <div class="overlay z-20 hidden fixed top-0 bottom-0 left-0 right-0 bg-[#00000077]" onclick="openSidebar()"></div>
+    <!-- end of mobile control -->
+
+    <div class="flex items-start">
+
+        <div
+            class="right-side w-4/6 sm:w-3/5 md:w-1/3 lg:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
+            <!-- Sidebar content -->
+            <nav class="mt-4 block">
+                <ul class="mr-6 ml-6">
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                                <a href="../centerReservations/centerReservations.html">
+                                    <button
+                                        class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
+                                        <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                            <img class="w-8 h-8" src="../../assets/openbook.png" alt="Avatar">
+                                        </div>
+                                        حجوزات المركز
+                                        <img class="w-4 h-2 m-1" src="../../assets/dawnarrow.png" alt="Avatar">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                            <button id="electronicLibrary"
+                                class="coloredBut active w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                حجز موعد
+                            </button>
+                        </div>
+                        <div dir="rtl" class="ml-1 mr-0 mt-2">
+                            <button id="centerWorks"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px]">
+                                <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                                </div>
+                                مواعيدي
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="mb-4">
+                        <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                            <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                                <button
+                                    class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                    <div
+                                        class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                        <img class="w-8 h-8" src="../../assets/logout.png" alt="Avatar">
+                                    </div>
+                                    تسجيل خروج
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main content area -->
+        <main class=" py-14 px-6 w-full mx-auto" dir="rtl" id="main_container">
+
+            <div id="contantContainer"
+                class="block w-full justify-between md:justify-center lg:justify-center pr-2 overflow-x-auto">
+                <div id="table-container">
+                    <div class="container">
+                        <table class="table-auto m-auto my-4">
+                            <thead>
+                                <tr class=" text-center bg-purple-light text-white">
+                                    <th class="px-4 py-2 whitespace-nowrap">الايام</th>
+                                    <th class="px-4 py-2 whitespace-nowrap">التاريخ</th>
+                                    <th class="px-4 py-2 whitespace-nowrap">الحصة 1</th>
+                                    <th class="px-4 py-2 whitespace-nowrap"> الحصة 2</th>
+                                    <th class="px-4 py-2 whitespace-nowrap">الحصة 3</th>
+                                    <th class="px-4 py-2 whitespace-nowrap"> الحصة 4</th>
+                                    <th class="px-4 py-2 whitespace-nowrap">الحصة 5</th>
+                                    <th class="px-4 py-2 whitespace-nowrap"> الحصة 6</th>
+                                    <th class="px-4 py-2 whitespace-nowrap">الحصة 7</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">الاحد</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">12/2/2023
+                                    </td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-gold-100">محجوز</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">الاحد</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">12/2/2023
+                                    </td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-gold-100">محجوز</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">الاحد</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">12/2/2023
+                                    </td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-gold-100">محجوز</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">الاحد</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-black-100">12/2/2023
+                                    </td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-gold-100">محجوز</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                    <td class="border px-4 py-2 whitespace-nowrap text-base text-green-100">متاح</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+    </div>
+
+
+    <!-- START MODAL -->
+    <div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
+
+        <div class="fixed inset-0 z-60 overflow-y-auto">
+            <div
+                class="flex justify-center items-center min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div
+                    class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div>
+                            <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
+                            <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
+                                <img src="../../assets/person2.png" alt="">
+                                <div class="mt-2">
+                                    <p class="text-xl text-black-300 font-semibold mb-2">
+                                        هل تريد حجز موعد في مركز ؟
+                                    </p>
+                                    
+                                </div>
+                                <form dir="rtl" action="" class="w-full items-center justify-center mb-2">
+                                    <label class="text-xl text-black-300 font-semibold mb-6"> ادخل الصف</label>
+                                    <input type="text" name="className" id="className" placeholder="أدخل الصف"
+                                        class="py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                                        <label class="text-xl text-black-300 font-semibold mb-6"> ادخل الفصل</label>
+                                        <input type="text" name="className" id="className" placeholder="أدخل الفصل"
+                                            class="py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">
+                                </form>
+                                <div class="flex w-full justify-center gap-8">
+                                    <button class="reject bg-light-gold text-white py-2 px-8 rounded-lg">
+                                        تراجع
+                                    </button>
+                                    <a href="#" class="accept bg-gold text-white py-2 px-8 rounded-lg">
+                                        تأكيد
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+
+    <img class="mx-auto h-200 w-200 absolute bottom-20 left-0 sm:bottom-0 md:bottom-0 -z-10"
+        src="../../assets/Group 6.png" alt="hash">
+
+    <script>
+        function openSidebar() {
+            document.querySelector(".sidebar").classList.toggle("hidden");
+            document.querySelector(".sidebar").classList.toggle("sm:hidden");
+            document.querySelector(".sidebar").classList.toggle("md:hidden");
+            document.querySelector(".overlay").classList.toggle("hidden");
+        }
+    </script>
+
+    <!-- modal -->
+    <script>
+        const modal = document.querySelector(".modal");
+        const closeIcon = document.querySelector(".closeIcon");
+
+        const reject = document.querySelector(".reject");
+
+        // Get all <td> elements
+        const tdElements = document.querySelectorAll('td');
+
+        // Loop through <td> elements and add click listener
+        tdElements.forEach(td => {
+            td.addEventListener('click', (e) => {
+                // Handle click event here
+                //console.log('Clicked on <td> element');
+                if (e.target.textContent === "متاح") {
+                    modal.classList.remove("hidden");
+                }
+            });
+        });
+
+        closeIcon.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+
+        reject.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+
+    </script>
+
+</body>
+
+</html>

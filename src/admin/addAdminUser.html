@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <title>إعدادات المكتبة</title>
+</head>
+
+<body>
+
+<header class="bg-white flex-wrap items-center justify-between mx-2 mb-2 rounded-b-2xl ">
+    <div class="flex justify-between items-center mx-auto px-4 rounded-b-2xl w-full bg-purple-light">
+        <!-- Search Input -->
+        <div class="relative flex items-center">
+            <img src="../../assets/avtar.png" alt="My Image" class="h-10 w-10 rounded-full sm:mr-4 order-3">
+            <h1 class="text-white font-bold text-lg">عبد الله أحمد</h1>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex items-center sm:ml-4">
+            <img src="../../assets/goldenlogo.png" alt="Logo" class="h-16 w-17">
+        </div>
+
+        <!-- User Data -->
+        <div class="sm:flex flex items-end sm:items-center">
+            <div class="relative flex items-center order-2 sm:order-1">
+                <button>
+                    <img src="../../assets/bell.png" alt="Bell" class="h-7 w-7">
+                    <span
+                            class="absolute bottom-4 left-4 p-2 rounded-full bg-red-600 text-white text-xs flex items-center justify-center h-4 w-4">
+                            10
+                        </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="h-2 bg-purple-light mt-2"></div>
+</header>
+
+<!-- mobile nav control -->
+<!-- Burger menu -->
+<span
+        class="absolute lg:hidden p-2 border-gray-100 border-solid border-2 rounded-md text-black text-2xl top-20  right-4 cursor-pointer"
+        onclick="openSidebar()">
+        <i class="las la-bars la-2xl"></i>
+    </span>
+<div class="overlay z-20 hidden fixed top-0 bottom-0 left-0 right-0 bg-[#00000077]" onclick="openSidebar()"></div>
+<!-- end of mobile control -->
+
+<div class="flex items-start">
+
+
+    <div
+            class="right-side w-3/4 sm:w-3/5 md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/6 sidebar h-screen z-30 md:z-30 bg-side-bar side_mobile hidden sm:hidden md:hidden lg:block top-0 bottom-0 right-0 overflow-y-auto gap-7 ">
+        <!-- Sidebar content -->
+
+        <nav class="navBarShow mt-4 block">
+            <ul class="mr-6 ml-6">
+                <li class="mb-4">
+                    <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                        <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <a href="learningResourcesCenterTab.html">
+                                <button
+                                        class="font-semibold focus:outline-none text-right flex items-center justify-between py-1 pr-2 pl-6 text-sm">
+                                    <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                        <img class="w-8 h-8" src="../../assets/openbook.png" alt="Avatar">
+                                    </div>
+                                    مركز مصادر التعلم
+                                    <img class="w-4 h-2 m-1" src="../../assets/dawnarrow.png" alt="Avatar">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                        <div class="colordTab py-0 px-0 bg-white rounded-2xl ">
+                            <a href="userTab1.html">
+                                <button id="users"
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                    <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                        <img class="w-8 h-8" src="../../assets/activities.png" alt="Avatar">
+                                    </div>
+                                    المستخدمين
+                                    <img class="w-4 h-2 m-1" src="../../assets/dawnarrow.png" alt="Avatar">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                        <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <a href="activities.html">
+                                <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                    <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                        <img class="w-8 h-8" src="../../assets/tabperson.png" alt="Avatar">
+                                    </div>
+                                    الانشطة
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                        <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <a href="statisticsTab.html">
+                                <button
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                    <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                        <img class="w-8 h-8" src="../../assets/logout.png" alt="Avatar">
+                                    </div>
+                                    الاحصائيات
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                        <div class="colordTab py-0 px-0 bg-white rounded-2xl active">
+                            <a href="../Users/userTab.html">
+                                <button id="users"
+                                        class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                    <div
+                                            class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                        <img class="w-8 h-8" src="../../assets/activities.png" alt="Avatar">
+                                    </div>
+                                    المستخدمين
+                                    <img class="w-4 h-2 m-1" src="../../assets/dawnarrow.png" alt="Avatar">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div dir="rtl" class="ml-1 mr-0 mt-2">
+                        <button id="admin"
+                                class="coloredBut w-44 bg-white font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm rounded-[16px] active">
+                            <div
+                                    class="w-10 h-10 ml-1 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                <img class="w-6 h-6" src="../../assets/book-stack.png" alt="Avatar">
+                            </div>
+                            الدعم الفني
+                        </button>
+                    </div>
+                <li class="mb-4">
+                    <div dir="rtl" class="border-gray-100 rounded-[16px] w-full">
+                        <div class="colordTab py-0 px-0 bg-white rounded-2xl">
+                            <button
+                                    class="font-semibold focus:outline-none text-right flex items-center py-1 pr-2 pl-6 text-sm">
+                                <div
+                                        class="w-12 h-12 ml-2 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center">
+                                    <img class="w-8 h-8" src="../../assets/logout.png" alt="Avatar">
+                                </div>
+                                تسجيل خروج
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- Main content area -->
+    <main class=" py-14 px-6 w-full mx-auto" dir="ltr" id="main_container">
+
+        <div id="contantContainer"
+             class="flex w-full justify-between md:justify-center lg:justify-center pr-2 overflow-x-auto">
+            <div class="w-full sm:max-w-lg sm:p-8 shadow-xl rounded-lg">
+                <form class="mt-0 space-y-6" id="supervisorForm" dir="rtl" lang="ar"
+                      onsubmit="support_sent(event)">
+
+                    <div class="-space-y-px rounded-md shadow-sm">
+                        <div class="mb-4"><label for="SupervisorName" class="font-bold">المشكلة</label>
+                            <p
+                                    type="text" id="SupervisorName" name="SupervisorName" placeholder="المشكلة"
+                                    class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">التسجيل بالمنصة </p>
+                        </div>
+                        <div class="mb-4">
+                            <label for="userName" class="font-bold">وصف المشكلة</label>
+                            <textarea name="" class="w-full bg-gray-light rounded-lg p-2" id="" cols="40" rows="10" placeholder="اكتب وصف المشكلة"> اواجه مشكله في التسجيل بالمنصة لما ادخل رقم الجوال لا تصلني الرسالة النصية لتفعيل الحساب</textarea>
+                            <p id="userNameInputError" class="text-red-100 text-xs mt-1"></p>
+                        </div>
+                        <div class="py-4 flex justify-center border-none">
+                            <button type="submit" class="bg-[#5F2263] text-white px-12 py-4 w-full my-4 rounded-lg" id="addButton"> تمت معالجة الطلب </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+</div>
+
+
+<!-- START MODAL -->
+<div class="modal relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-black-light bg-opacity-75 transition-opacity"></div>
+
+    <div class="fixed inset-0 z-60 overflow-y-auto">
+        <div
+                class="flex justify-center items-center min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div
+                    class="relative transform overflow-hidden rounded-large bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div>
+                        <p class="closeIcon text-3xl text-blue-200 cursor-pointer">x</p>
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 flex flex-col justify-center items-center">
+                            <img src="../../assets/Group support.png" alt="">
+                            <h3 class="text-base font-semibold leading-6 text-black-200 text-xl my-4"
+                                id="modal-title">
+                                تمت معالجة الطلب
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MODAL -->
+
+<img class="mx-auto h-200 w-200 absolute bottom-20 left-0 sm:bottom-0 md:bottom-0 -z-10"
+     src="../../assets/Group 6.png" alt="hash">
+
+<script>
+    function openSidebar() {
+        document.querySelector(".sidebar").classList.toggle("hidden");
+        document.querySelector(".sidebar").classList.toggle("sm:hidden");
+        document.querySelector(".sidebar").classList.toggle("md:hidden");
+        document.querySelector(".overlay").classList.toggle("hidden");
+    }
+</script>
+
+<script>
+    const modal = document.querySelector(".modal");
+    const closeIcon = document.querySelector(".closeIcon");
+
+    closeIcon.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    function support_sent(event)
+    {
+        event.preventDefault();
+        modal.classList.remove("hidden");
+        return false;
+    }
+
+
+</script>
+
+</body>
+
+</html>
