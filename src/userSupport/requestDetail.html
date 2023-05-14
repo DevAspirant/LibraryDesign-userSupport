@@ -106,13 +106,25 @@
               onsubmit="support_sent(event)">
 
           <div class="-space-y-px rounded-md shadow-sm">
-            <div class="mb-4"><label for="SupervisorName" class="font-bold">المشكلة</label>
-              <p
-                      type="text" id="SupervisorName" name="SupervisorName" placeholder="المشكلة"
-                      class="mt-3 py-3 bg-gray-light t w-full rounded-md border-0 p-1.5 text-gray-900 ring-1 sm:text-sm sm:leading-6">التسجيل بالمنصة </p>
+            <div class="mb-4">
+            <label for="issues" class="block mb-2 text-gray-900 dark:text-white font-bold" >المشكلة</label>
+            <select id="issues" class="bg-gray-50 border border-gray-300 text-gray-900 text-mid rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option> اختر نوع المشكلة </option>
+              <option value="reg"> التسجيل </option>
+              <option value="pay"> الدفع </option>
+              <option value="enduserReg"> تسجيل المستفيدين </option>
+              <option value="upload"> رفع الكتب </option>
+              <option value="booking"> اشغال المركز </option>
+              <option value="staticis"> الاحصائيات </option>
+              <option value="evenets"> الانشطة </option>
+              <option value="chalange"> جوازات التحدي </option>
+              <option value="store"> المتجر </option>
+              <option value="points"> النقاط </option>
+              <option value="other"> اخرى </option>
+            </select>
             </div>
             <div class="mb-4">
-              <label for="userName" class="font-bold">وصف المشكلة</label>
+              <label for="IssuesDetails" class="font-bold">وصف المشكلة</label>
               <textarea name="" class="w-full bg-gray-light rounded-lg p-2" id="" cols="40" rows="10" placeholder="اكتب وصف المشكلة"> اواجه مشكله في التسجيل بالمنصة لما ادخل رقم الجوال لا تصلني الرسالة النصية لتفعيل الحساب</textarea>
               <p id="userNameInputError" class="text-red-100 text-xs mt-1"></p>
             </div>
